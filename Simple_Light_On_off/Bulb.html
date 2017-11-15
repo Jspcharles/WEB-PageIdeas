@@ -1,0 +1,70 @@
+<html>
+	<body>
+		<button onclick="document.getElementById('myImage').src = 'pic_bulbon.gif'">Click to on</button>
+		
+		<img id="myImage" src="pic_bulboff.gif">
+		
+		<button onclick="document.getElementById('myImage').src = 'pic_bulboff.gif'">Click to off</button>
+		
+		<h2 id="big">Click Me<h2>
+		
+		<button onclick="document.getElementById('big').innerHTML = 'Make it Bg'">click me</button>
+		
+		<!-- function -->
+		<script>
+		function myfun(){
+			document.getElementById('demo').innerHTML = 'MyCHAR';
+		}
+		</script>
+		
+		
+		<h1 id="demo">SEE ME</h1>
+		
+		<button type="button" onclick="myfun()">click me</button>
+		</br></br>
+		<!-- window alert -->
+		<button type="button" onclick="window.alert(6+11)">Click mE</button>
+		
+		</br></br>
+		
+		<script>
+		function myfunction(){
+		window.alert('Hello World');
+		}
+		</script>
+		
+		<button type="button" onclick="myfunction()">click me</button>
+		
+		
+		</br></br>
+		
+		<p>Input your age and click the button:</p>
+		
+		<input type="text" id="age">
+		
+		<button type="button" onclick="myAgeFunction()">Try it</button>
+		
+		<script>
+			function myAgeFunction(){
+				var reply, age;
+				age = Number(document.getElementById('age').value);
+				
+				if(isNaN(age) || age < 1){
+					reply = "Input error";
+				}
+				
+				else if(age < 18){
+					reply = "You are not adult";
+				}
+				
+				else {
+					reply = "You are adult";
+				}
+				
+				document.getElementById('AgeReply').innerHTML = reply;
+			}
+		</script>
+		<p id="AgeReply"></p>
+		
+	</body>
+</html>
